@@ -5,9 +5,9 @@
 
 int main()
 {
-    int matriz1[2][2];
-    int matriz2[2][2];
-    int matrizMult[2][2];
+    int matriz1[linhas][colunas];
+    int matriz2[linhas][colunas];
+    int matrizMult[linhas][colunas];
 
     printf("\nPreencha a matriz 1: \n");
     for (int i = 0; i < linhas; i++)
@@ -64,7 +64,35 @@ int main()
         }
     }
 
-    printf("\nMatriz Multiplicação: \n");
+    printf("\nMatriz Multiplicação com laço FOR: \n");
+    for (int i = 0; i < linhas; i++)
+    {
+        for (int j = 0; j < colunas; j++)
+        {
+            printf(" %d ", matrizMult[i][j]);
+        }
+        printf("\n");
+    }
+
+    int mAux, i, j, k = 0;
+    printf("\nMultiplicação de matriz1 por matriz2:\n");
+    while (i < linhas)
+    {
+        i++;
+        while (j < colunas)
+        {
+            j++;
+            while (k < colunas)
+            {
+                k++;
+                mAux = mAux + (matriz1[i][k] * matriz2[k][j]);
+            }
+            matrizMult[i][j] = mAux;
+            mAux = 0;
+        }
+    }
+
+    printf("\nMatriz Multiplicação com laço WHILE: \n");
     for (int i = 0; i < linhas; i++)
     {
         for (int j = 0; j < colunas; j++)

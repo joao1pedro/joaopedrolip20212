@@ -11,22 +11,35 @@
 
  ### 4. Baseado em contagem:
  ```
-for (int i = 0; i < linhas; i++)
+for(int i = 0; i < linhas; i++) {
+    for (int j = 0; j < colunas; j++)
     {
-        for (int j = 0; j < colunas; j++)
+        for (int k = 0; k < colunas; k++)
         {
-            for (int k = 0; k < colunas; k++)
-            {
-                aux = aux + (matriz1[i][k] * matriz2[k][j]);
-            }
-            matrizMult[i][j] = aux;
-            aux = 0;
+            aux = aux + (matriz1[i][k] * matriz2[k][j]);
         }
+        matrizMult[i][j] = aux;
+        aux = 0;
     }
+}
  ```
  Nesta abordagem as matrizes são representadas por vetores de duas dimensões.
 
 ### com while:
 ```
-
+while (i < linhas) {
+    i++;
+    while (j < colunas)
+    {
+        j++;
+        while (k < colunas)
+        {
+            k++;
+            mAux = mAux + (matriz1[i][k] * matriz2[k][j]);
+        }
+        matrizMult[i][j] = mAux;
+        mAux = 0;
+    }
+}
 ```
+No caso da implementação com while, os indices tem que ser incrementados manualmente, algo que não ocorre no for, onde isso já ocorre de maneira automática a cada iteração.
