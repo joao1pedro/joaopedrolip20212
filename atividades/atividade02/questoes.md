@@ -1,5 +1,9 @@
 # Nome: João Pedro
 
+> Correção: 1,0
+> 
+> Tudo OK! Só use nova linhas entre o número da questão e a resposta, para evitar que seu texto fique todo em negrito.
+
  ### 1. Os três principais métodos de implementação de linguagens de programação são:
  - **Compilação:** Nesta abordagem, os programas são transformados em intruções de linguagem de máquina (linguagem que o computador consegue reconhecer) a partir da compilação. Exemplos de linguagens nesta categoria são: C, C++ e COBOL.
  - **Interpretação:** Neste caso, os programas não são traduzidos como ocorre na compilação, os programas são interpretados por um programa especial que realiza essa função de interpretar o código fonte do programa. Exemplos de linguagens que utilizam esta abordagem são: Python, PHP, Javascript.
