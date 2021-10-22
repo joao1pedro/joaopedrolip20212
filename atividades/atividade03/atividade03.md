@@ -79,3 +79,65 @@ Derivação a direita. (a 23 (m x y))
        => (<átomo> 23 (m x y))
        => (a 23 (m x y))
 ```
+
+### Questão 3
+
+```
+<switch_stmt> => switch ( identificador ) { <stmt> ; <stmt_list>}
+<stmt_list>   => <stmt> <stmt_list>; | <stmt>
+<stmt>        => <expr> |  <expr_list> | case <cst> : <stmt> | case <cst> : <stmt_list>
+<expr_list>   => <expr> | ( <expr_list> ) | <stmt> | <expr> <expr>
+<expr>        => <expr> + <expr> | <expr> - <expr> | <expr> * <expr> | <expr> / <expr> | <term>
+<term>        => identificador | <cst> | identificador = <expr>; | <cst>; | identificador; identificador = <expr>; default: <stmt_list>
+<cst>         => 1| 2| 3| ... n
+```
+
+- Switch Case avaliado:
+
+```
+switch (opcao) {
+	case 1:
+		soma = 2 + 5;
+	case 2:
+		soma = 3 + 2;
+	default:
+		soma = 0;
+}
+```
+
+```
+<switch_stmt> => switch ( id ) { <stmt>; <stmt_list>}
+=> switch ( id ) { <expr_list> }
+=> switch ( id ) { case <cst> : <stmt>; <stmt_list> }
+=> switch ( id ) { case 1 : <stmt>; <stmt_list> }
+=> switch ( id ) { case 1 : <expr_list>; <stmt_list> }
+=> switch ( id ) { case 1 : <expr_list> <expr>; <stmt_list> }
+=> switch ( id ) { case 1 : <expr> ; <stmt_list> }
+=> switch ( id ) { case 1 : <term> ; <stmt_list> }
+=> switch ( id ) { case 1 : id = <expr>; <stmt_list> }
+=> switch ( id ) { case 1 : id = <expr> + <expr>; <stmt_list> }
+=> switch ( id ) { case 1 : id = <term> + <expr>; <stmt_list> }
+=> switch ( id ) { case 1 : id = <cst> + <expr>; <stmt_list> }
+=> switch ( id ) { case 1 : id = 2 + 5; <stmt_list> }
+=> switch ( id ) { case 1 : id = 2 + 5; <stmt> }
+=> switch ( id ) { case 1 : id = 2 + 5; case <cst> : <stmt> }
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : <stmt> }
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : <expr_list> }
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : <expr> }
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : <term> }
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = <expr>; default: <stmt_list>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = <expr> + <expr>; default: <stmt_list>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = <term> + <expr>; default: <stmt_list>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = <cst> + <expr>; default: <stmt_list>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = 2 + <expr>; default: <stmt_list>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = 2 + <term>; default: <stmt_list>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = 2 + <cst>; default: <stmt_list>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = 2 + 3; default: <stmt_list>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = 2 + 3; default: <stmt>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = 2 + 3; default: <expr>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = 2 + 3; default: <term>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = 2 + 3; default: id = <expr>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = 2 + 3; default: id = <term>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = 2 + 3; default: id = <cst>}
+=> switch ( id ) { case 1 : id = 2 + 5; case 2 : id = 2 + 3; default: id = 0;}
+```
