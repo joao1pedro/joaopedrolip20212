@@ -1,5 +1,9 @@
 # Nome: João Pedro
 
+> Correção: 1,7
+> 
+> Faltou a árvore da segunda questão. Na terceira, faltou tratar o break. Mas o esforço foi legal, muito bom.
+
 ### Questão 01
 
  - 1. Derivação a esquerda. A = A + (B + C) 
