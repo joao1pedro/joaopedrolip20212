@@ -1,7 +1,14 @@
 # Nome: João Pedro
+
+> Correção: 1,5 
+
 ### Questão 1
 <img src="./img/q1.jpeg"
      alt="Q1"/>
+
+> Correção: 0,3
+> 
+> Onde estão as derivações?
 
 ### Questão 2
 ```
@@ -13,12 +20,22 @@
 <expression> -> <var> {(+ | -) <var>}
 ```
 
+> Correção: 0,2
+> 
+> Só fez \<var\> e não atualizou \<stmt_list\>?
+
+
 ### Questão 3
 ```
 <assign> -> <id> = <expr> 
 <id> -> A|B|C
 <expr> -> <id> { (+ | - ) ( <expr> | (<expr>) ) }
 ```
+
+> Correção: 0,5
+> 
+> OK!!!
+
 
 ### Questão 4
 ```
@@ -37,3 +54,7 @@
 4. Regra sintática: <var> -> A | B | C
    Regra semântica: <var>.actual_type <- look-up(<var>.string)
 ```
+
+> Correção: 0,3
+> 
+> O predicado ficou estranho. O correto seria apenas retirá-lo.
