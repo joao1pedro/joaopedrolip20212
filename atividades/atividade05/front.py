@@ -9,18 +9,17 @@ nextToken = None
 
 def getc(in_fp):
     while True:
-        # read by character
         char = in_fp.read(1)
 
         if not char:
             break
         return char
-        # print(char)
 
     in_fp.close()
 
 
 def lookup(ch):
+    global nextToken
     if ch == '(':
         addChar()
         nextToken = 25  # LEFT_PAREN
@@ -48,6 +47,7 @@ def lookup(ch):
 def addChar():
     global nextChar
     global lexLen
+
     if lexLen <= 98:
         lexeme[lexLen+1] = nextChar
         lexeme[lexLen] = 0
@@ -115,7 +115,8 @@ def lex():
         lexeme[1] = 'O'
         lexeme[2] = 'F'
         lexeme[3] = 0
-    print(f"Next token is: {nextToken}, Next lexeme is {lexeme}\n")
+    print(
+        f"Next token is: {nextToken}, Next lexeme is {[x for x in lexeme if x is not None]}\n")
     return nextToken
 
 
