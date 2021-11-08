@@ -1,3 +1,7 @@
+# Correção: 1,8
+# Quase lá, na trave! O problema é a maneira que você definiu lexeme dificulta tratar variáveis com nome de mais de um caractere.
+# Veja o front.in que coloqui no seu repositório.
+
 # declaração de variaveis
 lexeme = [None]*100
 in_fp = open('front.in', 'r')
