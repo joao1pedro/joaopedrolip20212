@@ -1,3 +1,5 @@
+# Correção: 2,0
+# Para resolver a definição de lexeme, bastaria usar strings em Python e substituir as operações baseadas em ponteiros do C por funções nativas do Python
 # declaração de variaveis
 lexeme = [None]*100
 in_fp = open('front.in', 'r')
