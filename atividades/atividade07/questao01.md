@@ -1,5 +1,7 @@
 # Nome: João Pedro
 
+# Correção: 1,0
+
 ### Gramática:
 ```
 1. E -> E + T
