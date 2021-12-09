@@ -1,3 +1,5 @@
+// Correção: 0,8
+// Mesmo problema da primeira.
 package main
 
 import (

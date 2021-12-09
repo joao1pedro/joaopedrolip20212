@@ -1,3 +1,5 @@
+// Correção: 0,4
+// Faça suas funções recebendo parâmetros
 package main
 
 import (
