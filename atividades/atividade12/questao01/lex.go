@@ -1,3 +1,4 @@
+// Correção: 0,5. Não executa, fica preso em um laço "lexeme is too long"
 package main
 
 import (
