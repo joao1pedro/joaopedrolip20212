@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> {{.Titulo}} </title>
+</head>
+
+<body>
+    <h1>{{.Titulo}}</h1>
+    <h2>Professor: {{.Professor}} - {{.Semestre}}</h2>
+    <table border = "1">
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                AP1
+            </th>
+            <th>
+                AP2
+            </th>
+            <th>
+                AP3
+            </th>
+            <th>
+                Média
+            </th>
+            <th>
+                Situação
+            </th>
+        </tr>
+
+        {{range .Alunos}}
+        <tr>
+            <td>
+                {{.Nome}} 
+            </td>
+            {{range .Notas}}
+            <th>
+                {{.}} 
+                {{end}}
+            </th>
+            <th>
+                {{.Media}}
+            </th>
+            <th>
+                {{.Situacao}}
+            </th>
+        </tr>
+        {{end}}
+
+    </table>
+</body>
+
+</html>

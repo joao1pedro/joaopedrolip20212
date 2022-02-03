@@ -1,0 +1,47 @@
+{
+    "titulo": "Linguagens de Programação",
+    "professor": "João Marcelo",
+    "semestre": "2021.2",
+    "alunos": [
+        {
+            "nome": "Joaquim José",
+            "notas": [
+                10.0, 
+                8.5,
+                7.0
+            ],
+            "media": 8.5,
+            "situacao" : "Aprovado"
+        },
+        {
+            "nome": "Xavier da Silva",
+            "notas": [
+                5.0, 
+                4.0,
+                3.0
+            ],
+            "media": 4.0,
+            "situacao" : "Reprovado"
+        },
+        {
+            "nome": "Maria Araújo",
+            "notas": [
+                10.0, 
+                10.0,
+                10.0
+            ],
+            "media": 10.0,
+            "situacao" : "Aprovado"
+        },
+        {
+            "nome": "Luana Honorato",
+            "notas": [
+                3.0, 
+                4.0,
+                2.0
+            ],
+            "media": 3.0,
+            "situacao" : "Reprovado"
+        }
+    ]
+}
