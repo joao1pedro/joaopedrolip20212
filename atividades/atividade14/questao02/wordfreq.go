@@ -1,3 +1,4 @@
+// Correção: 0,8. Contou "quatro", "Quatro" e "quatro;" como palavras diferentes.
 package main
 
 import (
