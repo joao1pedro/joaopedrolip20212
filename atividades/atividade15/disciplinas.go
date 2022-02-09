@@ -1,3 +1,4 @@
+// Correção: 1,0. Não lê o nome do HTML a ser gerado da linha de comando e nem calcula a situação de cada aluno.
 package main
 
 import (
